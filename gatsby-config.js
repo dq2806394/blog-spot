@@ -1,10 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Daniel's Dallas Arboretum Blog Spot`,
+    description: `My first-handed experience through a high-quality blog`,
     author: `@gatsbyjs`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: "0m3h65o8xsq1",
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: "JSpx_RDrgKFHdzMRy5Vt3hpYHoNAtR65cbVgC7x19Z0",
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
