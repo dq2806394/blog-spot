@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import headerStyles from "../components/header.module.css"
 
-const Header = ({ siteTitle, siteDescription, about, contact, blog }) => (
+const Header = ({ siteTitle, siteDescription, home, blog }) => (
   <header
     style={{
       background: `rgba(50,50,50,0.8)`,
@@ -31,7 +31,7 @@ const Header = ({ siteTitle, siteDescription, about, contact, blog }) => (
         <h3 style={{color: `rgba(223,227,235,0.4)`, margin: `0 0 0 0.9rem`}}>{siteDescription}</h3>
         <div style={{margin: `0 auto`, maxWidth: 960, padding: `1.45rem 1.08rem`, display: `flex`}}>
           <h4 style={{marginRight: `0.9rem`}}>
-            <Link to="/about" className={headerStyles.link}>{about}</Link>
+            <Link to="/" className={headerStyles.link}>{home}</Link>
           </h4>
           <h4 style={{marginRight: `0.9rem`}}>
             <Link to="/blog" className={headerStyles.link}>{blog}</Link>
@@ -43,7 +43,7 @@ const Header = ({ siteTitle, siteDescription, about, contact, blog }) => (
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-  about: PropTypes.string,
+  home: PropTypes.string,
   blog: PropTypes.string,
 }
 
